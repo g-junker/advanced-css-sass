@@ -5,3 +5,10 @@
     clear: both;
   }
 }
+
+@mixin column-width($colNum, $colTotal) {
+  $gutterAddedToWidth: calc(#{$gutter-horizontal} * (#{$colNum} - 1));
+  $columnWidth: calc((100% - (#{$colTotal} - 1) * #{$gutter-horizontal}) / #{$colTotal});
+
+  width: calc(#{$colNum} * #{$columnWidth} + #{$gutterAddedToWidth});
+}
