@@ -1,14 +1,14 @@
 @mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 @mixin column-width($colNum, $colTotal) {
-  $gutterAddedToWidth: calc(#{$gutter-horizontal} * (#{$colNum} - 1));
-  $columnWidth: calc((100% - (#{$colTotal} - 1) * #{$gutter-horizontal}) / #{$colTotal});
+    $gutterAddedToWidth: calc(#{$gutter-horizontal} * (#{$colNum} - 1));
+    $columnWidth: calc((100% - (#{$colTotal} - 1) * #{$gutter-horizontal}) / #{$colTotal});
 
-  width: calc(#{$colNum} * #{$columnWidth} + #{$gutterAddedToWidth});
+    width: calc(#{$colNum} * #{$columnWidth} + #{$gutterAddedToWidth});
 }
